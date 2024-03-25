@@ -1,14 +1,11 @@
 #pragma once
 #include <vector>
-#include <cmath>
-
 class Solution {
-    int n;
+    int count_baze;
+    int size;
+    int visited[200];
 public:
-    Solution(int value);
-    ~Solution();
-    bool search(int i, std::vector<int> v);
-    void isUnique(int n, std::vector<int> v);
-    int countNumbersWithUniqueDigits(int n);
+    Solution(std::vector<std::vector<int>>& isConnected);
+    void visit(std::vector<std::vector<int>>& isConnected, int begin);
+    int findResortNum(std::vector<std::vector<int>>& isConnected);
 };
-static int count = 0;
